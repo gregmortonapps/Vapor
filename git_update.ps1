@@ -71,7 +71,7 @@ Write-Host "Tag v$VERSION pushed successfully!" -ForegroundColor Green
 Write-Host "============================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "GitHub Actions is now building Vapor.exe..." -ForegroundColor Yellow
-Write-Host "Check progress at: https://github.com/Master00Sniper/Vapor/actions" -ForegroundColor Yellow
+Write-Host "Check progress at: https://github.com/gregmortonapps/Vapor/actions" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "Once complete, the release will be created automatically with:"
 Write-Host "  - Title: Vapor v$VERSION"

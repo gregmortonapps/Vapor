@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a>
-  <a href="https://github.com/Master00Sniper/Vapor/releases"><img src="https://img.shields.io/github/v/release/Master00Sniper/Vapor" alt="GitHub release"></a>
+  <a href="https://github.com/gregmortonapps/Vapor/releases"><img src="https://img.shields.io/github/v/release/gregmortonapps/Vapor" alt="GitHub release"></a>
 </p>
 
 Vapor is a lightweight Windows utility that watches for Steam game launches and applies your preferred settings automatically—so you can jump straight into the action.
@@ -62,14 +62,14 @@ No kernel drivers. No system modifications. No surprises.
 ## Installation
 
 ### Download (Recommended)
-1. Download `Vapor.exe` from the [latest release](https://github.com/Master00Sniper/Vapor/releases/latest)
+1. Download `Vapor.exe` from the [latest release](https://github.com/gregmortonapps/Vapor/releases/latest)
 2. Move Vapor.exe to your preferred location
 3. Double-click to start
 
 ### Run from Source
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Master00Sniper/Vapor.git
+   git clone https://github.com/gregmortonapps/Vapor.git
    cd Vapor
    ```
 2. Install dependencies:
@@ -102,7 +102,7 @@ See our [Privacy Policy](https://vapor.mortonapps.com/policies.html) for details
 ## Support
 
 - ☕ [Support on Ko-fi](https://ko-fi.com/master00sniper)
-- 🐛 [Report issues](https://github.com/Master00Sniper/Vapor/issues)
+- 🐛 [Report issues](https://github.com/gregmortonapps/Vapor/issues)
 
 ## License
 
