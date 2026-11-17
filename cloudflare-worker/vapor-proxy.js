@@ -32,6 +32,7 @@ const REPO_PATH_RE = /^\/repos\/(master00sniper|gregmortonapps)\/vapor\/(release
 const ISSUE_RATE_LIMIT = 5;        // new bug reports per IP per window
 const ISSUE_RATE_WINDOW = 3600;    // 1 hour in seconds
 const ISSUE_MAX_BYTES = 65536;     // a bug report body is a few KB
+const ALLOWED_ISSUE_LABELS = ['bug', 'user-reported']; // what older app versions sent
 
 function matchRepoRoute(method, pathname) {
   const m = REPO_PATH_RE.exec(pathname);
@@ -340,10 +341,16 @@ async function handleRequest(request) {
         return new Response('Bad Request', { status: 400 });
       }
       const cleanTitle = report.title.slice(0, 200);
-      fetchOptions.body = JSON.stringify({
+      const outReport = {
         title: /^\[Bug Report\]/.test(cleanTitle) ? cleanTitle : '[Bug Report] ' + cleanTitle,
         body: report.body,
-      });
+      };
+      // Some older app versions tag their reports; keep exactly those labels, nothing else.
+      if (Array.isArray(report.labels)) {
+        const kept = report.labels.filter(l => ALLOWED_ISSUE_LABELS.includes(l));
+        if (kept.length) outReport.labels = kept;
+      }
+      fetchOptions.body = JSON.stringify(outReport);
     }
 
     let response = await fetch(githubUrl, fetchOptions);
